@@ -1,9 +1,9 @@
 # VV-Lab-Rat-Fall-2022
 This is the repo of all the code for our game!
 
-Please email jakehub24@gmail.com for any questions
+Please email jakehub24@gmail.com for any questions.
 
-If you use the github desktop app, pushing pr's will be much easier, trust me
+If you use the github desktop app, pushing pr's will be much easier, trust me.
 
 Please use camelCase when coding, and make sure to format your code pleasently. If it doesn't make sense, then you'll have to either explain what you're doing or rewrite it.
 
