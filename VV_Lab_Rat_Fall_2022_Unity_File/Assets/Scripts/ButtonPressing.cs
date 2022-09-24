@@ -5,71 +5,51 @@ using UnityEngine.Events;
 
 public class ButtonPressing : MonoBehaviour
 {
-    public Transform buttonTop;
-    public Transform buttonLowerLimit;
-    public Transform buttonUpperLimit;
-    public float threshhold;
-    public float force = 10;
-    private float upperLowerDiff;
-    public bool isPressed;
-    private bool prevPressedState;
-    public AudioSource pressedSound;
-    public AudioSource releaseSound;
-    public UnityEvent onPressed;
-    public UnityEvent onReleased;
+    [SerializeField] private float threshold = 0.1f;
+    [SerializeField] private float deadzone = 0.025f;
 
+    private bool isPressed;
+    private Vector3 startPos;
+    private ConfigurableJoint joint;
+
+    public UnityEvent onPressed, onReleased;
 
 
     void Start()
     {
-        Physics.IgnoreCollision(GetComponent<Collider>(), buttonTop.GetComponent<Collider>());
-        if (transform.eulerAngles != Vector3.zero)
-        {
-            Vector3 savedAngle = transform.eulerAngles;
-            transform.eulerAngles = Vector3.zero;
-            upperLowerDiff = buttonUpperLimit.position.y - buttonLowerLimit.position.y;
-            transform.eulerAngles = savedAngle;
-        }
-        else
-        {
-            upperLowerDiff = buttonUpperLimit.position.y - buttonLowerLimit.position.y;
-        }
+        startPos = transform.localPosition;
+        joint = GetComponent<ConfigurableJoint>();
     }
 
     void Update()
     {
-        buttonTop.transform.localPosition = new Vector3(0, buttonTop.transform.localPosition.y, 0);
-        buttonTop.transform.localEulerAngles = new Vector3(0, 0, 0);
-        if (buttonTop.localPosition.y >= 0)
-              buttonTop.transform.position = new Vector3(buttonUpperLimit.position.x, buttonUpperLimit.position.y, buttonUpperLimit.position.z);
-        else
-            buttonTop.GetComponent<Rigidbody>().AddForce(buttonTop.transform.up * force * Time.fixedDeltaTime);
-        if (buttonTop.localPosition.y <= buttonLowerLimit.localPosition.y)
-            buttonTop.transform.position = new Vector3(buttonLowerLimit.position.x, buttonLowerLimit.position.y, buttonLowerLimit.position.z);
-        if (Vector3.Distance(buttonTop.position, buttonLowerLimit.position) < upperLowerDiff * threshhold)
-            isPressed = true;
-        else
-            isPressed = false;
-
-        if (isPressed && prevPressedState != isPressed)
+        if (!isPressed && GetValue() + threshold >= 1)
             Pressed();
-        if (!isPressed && prevPressedState != isPressed)
+        if (isPressed && GetValue() - threshold <= 0)
             Released();
     }
 
-    void Pressed()
+    private float GetValue()
     {
-        prevPressedState = isPressed;
-        pressedSound.pitch = 1;
-        pressedSound.Play();
-        onPressed.Invoke();
+        var value = Vector3.Distance(startPos, transform.localPosition / joint.linearLimit.limit) ;
+
+        if (Mathf.Abs(value) < deadzone)
+            value = 0;
+
+        return Mathf.Clamp(value, -1f, 1f);
     }
 
-    void Released()
+    private void Pressed()
     {
-        prevPressedState = isPressed;
-        releaseSound.pitch = 1;
-        releaseSound.Play();
+        isPressed = true;
+        onPressed.Invoke();
+        Debug.Log("Pressed");
+    }
+
+    private void Released()
+    {
+        isPressed = false;
         onReleased.Invoke();
+        Debug.Log("Released");
     }
 }
