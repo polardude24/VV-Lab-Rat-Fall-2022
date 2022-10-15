@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ButtonPressing : MonoBehaviour
+public class LeverPulling : MonoBehaviour
 {
     [SerializeField] private float threshold = 0.1f;
     [SerializeField] private float deadzone = 0.025f;
@@ -24,16 +24,16 @@ public class ButtonPressing : MonoBehaviour
     void Update()
     {
 
-       // Debug.Log(GetValue());
-        if (!isPressed && GetValue()  >= 1)
+        // Debug.Log(GetValue());
+        if (!isPressed && GetValue() >= 1)
             Pressed();
-        if (isPressed && GetValue()  <= 0.72)
+        if (isPressed && GetValue() <= 0.72)
             Released();
     }
 
     private float GetValue()
     {
-        var value = Vector3.Distance(startPos, transform.localPosition / joint.linearLimit.limit) ;
+        var value = Vector3.Distance(startPos, transform.localPosition / joint.linearLimit.limit);
 
         if (Mathf.Abs(value) < deadzone)
             value = 0;
