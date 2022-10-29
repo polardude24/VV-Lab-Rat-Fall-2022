@@ -5,11 +5,21 @@ using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public float time = 0;
-    
+    public float opacity = 0f;
+    public RawImage gameOver;
+    public bool timeUp = false;
+
 
     void Update()
     {
-        time -= Time.deltaTime;
+        if (timeUp)
+        {
+            Color g = new Color(255, 255, 255, opacity);
+            gameOver.color = g;
+            if (opacity < 2)
+            {
+                opacity += (Time.deltaTime)/2.5f;
+            }
+        }
     }
 }

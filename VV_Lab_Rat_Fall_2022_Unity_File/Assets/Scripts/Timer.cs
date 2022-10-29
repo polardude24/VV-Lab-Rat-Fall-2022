@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    public GameObject TextObject;
     public float timeLeftMinutes = 5;
     public float timeLeftSeconds = 0;
     public float f = 300f;
     public float f1;
     public TextMeshProUGUI text;
+    public GameObject GameOverObject;
     void Update()
     {
         f -= Time.deltaTime;
@@ -27,6 +29,11 @@ public class Timer : MonoBehaviour
             {
                 text.text = "Time left: \n" + timeLeftMinutes.ToString() + ":" + timeLeftSeconds.ToString();
             }
+        }
+        else
+        {
+            TextObject.SetActive(false);
+            GameOverObject.GetComponent<GameOver>().timeUp = true;            
         }
     }
 }
