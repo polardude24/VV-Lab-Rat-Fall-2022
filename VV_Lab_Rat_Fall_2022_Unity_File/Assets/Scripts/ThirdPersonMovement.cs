@@ -38,7 +38,8 @@ public class ThirdPersonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rb.drag = 5;
+        
 
         if (rb.velocity.y < 0)
         {

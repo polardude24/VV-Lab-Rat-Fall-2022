@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -34,6 +32,8 @@ public class CameraFollow : MonoBehaviour
 
         currentX += Input.GetAxis("Mouse X");
         currentY -= Input.GetAxis("Mouse Y");
+
+        currentY = Mathf.Clamp(currentY, 0.0f, 80f);
 
         Vector3 dir = new Vector3(0f,0f,-distance);
         Quaternion rot = Quaternion.Euler(currentY, currentX, 0f);
