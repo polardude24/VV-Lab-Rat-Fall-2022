@@ -13,9 +13,14 @@ public class Timer : MonoBehaviour
     public float f1;
     public TextMeshProUGUI text;
     public GameObject GameOverObject;
+    public bool gameRunning = false;
     void Update()
     {
-        f -= Time.deltaTime;
+        if (gameRunning)
+        {
+            f -= Time.deltaTime;
+        }
+        
         f1 = Mathf.CeilToInt(f);
         timeLeftSeconds = f1 % 60;
         timeLeftMinutes = Mathf.Floor(f1 / 60);
