@@ -13969,7 +13969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1288378465554963586, guid: 312892a049dfc9842b9dcc76705d4b7d, type: 3}
       propertyPath: fallMultiplier
-      value: 7.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1288378465554963587, guid: 312892a049dfc9842b9dcc76705d4b7d, type: 3}
       propertyPath: m_RootOrder
