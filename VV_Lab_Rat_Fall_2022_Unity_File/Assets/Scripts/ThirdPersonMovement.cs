@@ -11,6 +11,8 @@ public class ThirdPersonMovement : MonoBehaviour
     public Transform cam;
 
     public float speed = 6f;
+    public float Jumpspeed = 6f;
+    public float Groundspeed = 6f;
     public float gravity = -9.81f;
 
     public float fallMultiplier = 2.5f;
@@ -21,6 +23,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     public bool grounded = false;
+    public float jumpForce= 0f;
 
     Rigidbody rb;
 
@@ -29,6 +32,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Start()
     {
+        jumpForce = fallMultiplier * 300;
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -48,6 +52,15 @@ public class ThirdPersonMovement : MonoBehaviour
         else if (rb.velocity.y > 0 && !Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+        if (grounded == false && fallMultiplier > 2.5)
+        {
+            speed = Jumpspeed;
+        }
+        else
+        {
+            speed = Groundspeed;
         }
 
 
@@ -80,7 +93,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && grounded == true)
         {
-            m_Rigidbody.AddForce(0, 750, 0);
+            m_Rigidbody.AddForce(0, jumpForce, 0);
             grounded = false;
         }
 
