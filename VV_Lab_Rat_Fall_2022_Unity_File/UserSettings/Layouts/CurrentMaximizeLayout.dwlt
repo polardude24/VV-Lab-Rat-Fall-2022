@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 83934
+  controlID: 101
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,22 +186,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Camera
+    - Assets/Objects
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Camera
+  - Assets/Objects
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bittest\Documents\GitHub\VV Lab Rat Fall 2022\VV_Lab_Rat_Fall_2022_Unity_File
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e600000
-    m_LastClickedID: 24686
-    m_ExpandedIDs: 00000000546000006260000000ca9a3b
+    m_SelectedIDs: c4610000
+    m_LastClickedID: 25028
+    m_ExpandedIDs: 00000000686100007861000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -229,7 +229,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005460000000ca9a3b
+    m_ExpandedIDs: 0000000068610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 83874
+  controlID: 102
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.377337, y: 0.11970109, z: 0.42183948}
+    m_Target: {x: 290.8382, y: 0.98778534, z: 2881.4873}
     speed: 2
-    m_Value: {x: 10.377337, y: 0.11970109, z: 0.42183948}
+    m_Value: {x: 290.8382, y: 0.98778534, z: 2881.4873}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,13 +611,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.11956146, y: -0.8365739, z: 0.20206621, w: 0.4950036}
+    m_Target: {x: 0.38945565, y: -0.11694439, z: 0.049924377, w: 0.9122339}
     speed: 2
-    m_Value: {x: 0.11956087, y: -0.8365697, z: 0.2020652, w: 0.49500114}
+    m_Value: {x: 0.38945276, y: -0.11694352, z: 0.04992401, w: 0.91222715}
   m_Size:
-    m_Target: 0.95091665
+    m_Target: 3.5420277
     speed: 2
-    m_Value: 0.95091665
+    m_Value: 3.5420277
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -755,23 +755,23 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 82c5feffc8d3feff50d7feff743cffff7c3cffff883cffffae97ffff92afffff32b8fffff2c2ffff40c3ffffe6c7ffff3cd9ffffaaf8ffff14fbfffffe600000807500009075000080760000
+      m_ExpandedIDs: 14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Empty
+        m_OriginalName: Empty
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -4520
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 3}
+        m_ClientGUIView: {fileID: 10}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
