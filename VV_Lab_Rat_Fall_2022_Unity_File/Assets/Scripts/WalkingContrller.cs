@@ -5,6 +5,7 @@ using UnityEngine;
 public class WalkingContrller : MonoBehaviour
 {
     private Animator mAnimator;
+    public GameObject player;
     void Start()
     {
         mAnimator = GetComponent<Animator>();
@@ -12,11 +13,17 @@ public class WalkingContrller : MonoBehaviour
     public string[] userInput = new string[4]{"w", "a", "s", "d"};
     private int countingVariable = 0;
     private bool isWalking = false;
+    public bool isJumping = false;
 
     void Update()
     {
         if (mAnimator != null)
         {
+            if (player.GetComponent<ThirdPersonMovement>().grounded == false)
+            {
+                mAnimator.SetFloat("RunMultiplier", 0.2f);
+            }
+            else mAnimator.SetFloat("RunMultiplier", 1);
             if (KeyInput("w") || KeyInput("a") || KeyInput("s") || KeyInput("d"))
             {
                 mAnimator.SetBool("Walk", true);

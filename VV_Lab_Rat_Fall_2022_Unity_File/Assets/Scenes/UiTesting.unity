@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 1910450219}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2207,6 +2207,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3696851421991276889, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830464462720297909, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4830464463045195761, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
       propertyPath: m_Name
       value: Third person player
@@ -2259,5 +2267,17 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1606203393171987177}
+    - target: {fileID: 5974162022820630861, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1288378463929774369}
+    - target: {fileID: 6441307697388445186, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6784977836179247415, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd756b4ea798e24a87f94875177f36a, type: 3}
