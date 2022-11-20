@@ -17,37 +17,24 @@ public class WalkingContrller : MonoBehaviour
     {
         if (mAnimator != null)
         {
-            if (isWalking)
+            if (KeyInput("w") || KeyInput("a") || KeyInput("s") || KeyInput("d"))
             {
-                KeyInput("w");
+                mAnimator.SetBool("Walk", true);
             }
-
-            KeyInput("a");
-            KeyInput("s");
-            KeyInput("d");
-            /*
-            KeyInput(userInput[countingVariable]);
-            countingVariable++;
-            if (countingVariable == 4)
-            {
-                countingVariable = 0;
-            }
-            */
+            else mAnimator.SetBool("Walk", false);
         }
     }
 
-    public void KeyInput(string k)
+    public bool KeyInput(string k)
     {
         if (Input.GetKey(k))
         {
-            mAnimator.SetBool("Walk", true);
             isWalking = true;
-            Debug.Log(userInput[countingVariable]);
         }
         else if (Input.GetKey(k) == false)
         {
-            mAnimator.SetBool("Walk", false);
             isWalking = false;
         }
+        return isWalking;
     }
 }
