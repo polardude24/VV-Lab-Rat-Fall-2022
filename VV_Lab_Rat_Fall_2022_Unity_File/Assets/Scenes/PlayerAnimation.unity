@@ -1424,7 +1424,6 @@ GameObject:
   - component: {fileID: 1288378465744284945}
   - component: {fileID: 1288378465744284948}
   - component: {fileID: 1288378465744284949}
-  - component: {fileID: 1288378465744284950}
   m_Layer: 0
   m_Name: Third person player
   m_TagString: Player
@@ -1461,20 +1460,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1288378465744284950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288378465744284947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d9afd64ea2e33646bf42e32d8f24368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1288378465744284947}
-  isJumping: 0
 --- !u!1 &1293434751413130052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1471,7 @@ GameObject:
   - component: {fileID: 1925540221522299390}
   - component: {fileID: 1925540221522299391}
   - component: {fileID: 1925540221522299392}
+  - component: {fileID: 1925540221522299393}
   m_Layer: 0
   m_Name: Rat Model Full Run Animation
   m_TagString: Untagged
@@ -1659,6 +1645,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1925540221522299393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293434751413130052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9afd64ea2e33646bf42e32d8f24368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1288378465744284947}
+  isJumping: 0
 --- !u!1 &1945021685672980614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,7 +2092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356010200025647792}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: -2.5932379, y: -1.1655, z: 0}
+  m_LocalPosition: {x: -1.09, y: -1.1655, z: -8.51}
   m_LocalScale: {x: 107.18514, y: 107.18512, z: 107.18512}
   m_ConstrainProportionsScale: 0
   m_Children: []
