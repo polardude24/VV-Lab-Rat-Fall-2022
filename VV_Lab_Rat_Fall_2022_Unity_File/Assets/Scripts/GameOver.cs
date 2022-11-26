@@ -10,7 +10,6 @@ public class GameOver : MonoBehaviour
     public bool timeUp = false;
     public GameObject mainMenu;
 
-
     void Update()
     {
         if (timeUp)
@@ -19,10 +18,12 @@ public class GameOver : MonoBehaviour
             gameOver.color = g;
             if (opacity < 3)
             {
-                opacity += (Time.deltaTime)/2.5f;
+                Time.timeScale -= Time.deltaTime;
+                opacity += (Time.unscaledDeltaTime)/2.5f;
             }
             if (opacity > 2)
             {
+                Time.timeScale = 0;
                 mainMenu.SetActive(true);
                 opacity = 0;
                 Color e = new Color(255, 255, 255, 0);

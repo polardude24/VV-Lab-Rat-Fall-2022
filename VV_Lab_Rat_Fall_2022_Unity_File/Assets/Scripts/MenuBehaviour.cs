@@ -38,6 +38,7 @@ public class MenuBehaviour : MonoBehaviour
         playerCamera.SetActive(true);
         menuCamera.SetActive(false);
         timerObject.GetComponent<Timer>().gameRunning = true;
+        Time.timeScale = 1;
     }
 
     public void OpenSettings()

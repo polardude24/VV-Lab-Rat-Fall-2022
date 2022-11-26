@@ -48,7 +48,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 4781951162920444690, guid: aa76b0a565559b94bb4d1d28c3d75ba3, type: 3}
   m_Tag: 
-  m_SpeedParameter: RunMultiplier
+  m_SpeedParameter: TimeSlow
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -101,7 +101,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 4781951162920444690, guid: b4aaa62ba5ba6f04ba41a208bd2c639d, type: 3}
   m_Tag: 
-  m_SpeedParameter: RunMultiplier
+  m_SpeedParameter: TimeSlow
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -215,12 +215,6 @@ AnimatorController:
   m_Name: Rat
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: trWalk
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: Walk
     m_Type: 4
     m_DefaultFloat: 0
@@ -228,6 +222,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: RunMultiplier
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: TimeSlow
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
