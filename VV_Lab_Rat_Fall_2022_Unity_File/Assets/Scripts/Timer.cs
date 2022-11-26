@@ -38,7 +38,8 @@ public class Timer : MonoBehaviour
         else
         {
             TextObject.SetActive(false);
-            GameOverObject.GetComponent<GameOver>().timeUp = true;            
+            GameOverObject.GetComponent<GameOver>().timeUp = true;
+            f = 99999;
         }
     }
 }

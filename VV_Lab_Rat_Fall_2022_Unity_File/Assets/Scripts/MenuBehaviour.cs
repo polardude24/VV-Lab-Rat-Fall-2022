@@ -16,7 +16,8 @@ public class MenuBehaviour : MonoBehaviour
 
     void Start()
     {
-        //mainMenu.SetActive(true);
+        mainMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Update()
