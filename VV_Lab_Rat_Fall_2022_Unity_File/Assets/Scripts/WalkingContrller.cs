@@ -10,8 +10,6 @@ public class WalkingContrller : MonoBehaviour
     {
         mAnimator = GetComponent<Animator>();
     }
-    public string[] userInput = new string[4]{"w", "a", "s", "d"};
-    private int countingVariable = 0;
     private bool isWalking = false;
     public bool isJumping = false;
 
