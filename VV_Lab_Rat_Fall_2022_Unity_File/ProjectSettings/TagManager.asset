@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - rat
+  - cheese
   layers:
   - Default
   - TransparentFX
