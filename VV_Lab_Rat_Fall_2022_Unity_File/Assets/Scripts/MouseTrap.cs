@@ -7,13 +7,14 @@ public class MouseTrap : MonoBehaviour
     public Animator anim;
     public GameObject timerObject;
     public GameObject cheese;
+    public GameObject player;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            player.GetComponent<ThirdPersonMovement>().isKilled = true;
             anim.SetBool("Play", true);
-            Debug.Log("This is working");
             timerObject.GetComponent<Timer>().f = 0;
             cheese.SetActive(false);
         }

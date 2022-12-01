@@ -20,6 +20,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float speedLimiter = 10.0f;
 
+    public bool isKilled = false;
+
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     public bool grounded = false;
@@ -54,7 +56,12 @@ public class ThirdPersonMovement : MonoBehaviour
             rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        if (grounded == false && fallMultiplier > 2.5)
+
+        if (isKilled)
+        {
+            speed = 0;
+        }
+        else if (grounded == false && fallMultiplier > 2.5)
         {
             speed = Jumpspeed;
         }

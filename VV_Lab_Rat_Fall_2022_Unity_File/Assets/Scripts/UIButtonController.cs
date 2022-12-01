@@ -5,22 +5,13 @@ using UnityEngine.EventSystems;
 
 public class UIButtonController : MonoBehaviour
 {
-    public GameObject settings;
-    public GameObject settingsHover;
     public GameObject play;
     public GameObject playHover;
     public GameObject quit;
     public GameObject quitHover;
     public void Update()
     {
-        if (IsPointerOverUIObject() == 1)
-        {
-
-            settingsHover.SetActive(true);
-            settings.SetActive(false);
-
-        }
-        else if (IsPointerOverUIObject() == 2)
+        if (IsPointerOverUIObject() == 2)
         {
             playHover.SetActive(true);
             play.SetActive(false);
@@ -34,8 +25,6 @@ public class UIButtonController : MonoBehaviour
         {
             playHover.SetActive(false);
             play.SetActive(true);
-            settingsHover.SetActive(false);
-            settings.SetActive(true);
             quitHover.SetActive(false);
             quit.SetActive(true);
         }
