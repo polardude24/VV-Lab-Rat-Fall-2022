@@ -10,9 +10,9 @@ public class ThirdPersonMovement : MonoBehaviour
     Rigidbody m_Rigidbody;
     public Transform cam;
 
-    public float speed = 6f;
-    public float Jumpspeed = 6f;
-    public float Groundspeed = 6f;
+    public float speed = 60f;
+    public float Jumpspeed = 45f;
+    public float Groundspeed = 60f;
     public float gravity = -9.81f;
 
     public float fallMultiplier = 2.5f;
