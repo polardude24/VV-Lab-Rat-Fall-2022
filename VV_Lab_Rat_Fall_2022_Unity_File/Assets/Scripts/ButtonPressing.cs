@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,9 +25,12 @@ public class ButtonPressing : MonoBehaviour
     void Update()
     {
 
-       // Debug.Log(GetValue());
-        if (!isPressed && GetValue()  >= 1)
+        // Debug.Log(GetValue());
+        if (!isPressed && GetValue() >= 1)
+        {
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
             Pressed();
+        }
         if (isPressed && GetValue()  <= 0.72)
             Released();
     }
