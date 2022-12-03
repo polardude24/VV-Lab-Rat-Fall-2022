@@ -12,6 +12,8 @@ public class ButtonPressing : MonoBehaviour
     private bool isPressed;
     private Vector3 startPos;
     private ConfigurableJoint joint;
+    public GameObject door;
+    public bool end_button; 
 
     public UnityEvent onPressed, onReleased;
 
@@ -28,8 +30,14 @@ public class ButtonPressing : MonoBehaviour
         // Debug.Log(GetValue());
         if (!isPressed && GetValue() >= 1)
         {
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
-            Pressed();
+            if (end_button)
+            {
+                Pressed(); 
+            } else
+            {
+                Destroy(door);
+            } 
+      
         }
         if (isPressed && GetValue()  <= 0.72)
             Released();
