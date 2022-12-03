@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ public class ButtonPressing : MonoBehaviour
     private Vector3 startPos;
     private ConfigurableJoint joint;
     public GameObject door;
-    public bool end_button; 
+    public bool end_button;
+    public Text test;
 
     public UnityEvent onPressed, onReleased;
 
@@ -30,6 +32,8 @@ public class ButtonPressing : MonoBehaviour
         // Debug.Log(GetValue());
         if (!isPressed && GetValue() >= 1)
         {
+            test.text = "button pressed";
+
             if (end_button)
             {
                 Pressed(); 
